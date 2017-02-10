@@ -4,10 +4,12 @@
 \alias{ggplotExprHeatmap}
 \title{ggplotExprHeatmap}
 \usage{
-ggplotExprHeatmap(exprMatrix, legendPosition = "left")
+ggplotExprHeatmap(exprMatrix, logCounts = FALSE, legendPosition = "left")
 }
 \arguments{
 \item{exprMatrix}{A numeric matrix of gene expression values}
+
+\item{logCounts}{logical should the counts be logged first}
 
 \item{legendPosition}{character (one of 'left'[default], 'right', 'bottom', 'top')}
 }

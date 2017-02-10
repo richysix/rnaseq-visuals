@@ -3,6 +3,7 @@
 #' \code{ggplotExprHeatmap} returns a heatmap for the supplied matrix
 #'
 #' @param exprMatrix A numeric matrix of gene expression values
+#' @param logCounts logical should the counts be logged first
 #' @param legendPosition character (one of 'left'[default], 'right', 'bottom', 'top')
 #'
 #' @return a ggplot heatmap object
@@ -11,7 +12,11 @@
 #' ggplotExprHeatmap( matrix, legendPosition = 'right')
 #'
 #' @export
-ggplotExprHeatmap <- function( exprMatrix, legendPosition = 'left' ){
+ggplotExprHeatmap <- function( exprMatrix, logCounts = FALSE, legendPosition = 'left' ){
+  # log counts if required
+  if( logCounts ){
+    exprMatrix <- log10(exprMatrix + 1)
+  }
   # reshape data for heatmap
   exprMatrix.m <- reshape2::melt(exprMatrix)
   colnames(exprMatrix.m) <- c("Gene", "Sample", "Value")
