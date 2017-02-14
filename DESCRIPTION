@@ -1,6 +1,6 @@
 Package: rnaseqVis
 Title: Functions For RNA-seq Visualisation
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Authors@R: person("Richard", "White", email = "richard.white@sanger.ac.uk", role = c("aut", "cre"))
 Description: This is a set of private functions for visualising RNA-seq data.
 Depends: R (>= 3.3.1)
