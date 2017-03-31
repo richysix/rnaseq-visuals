@@ -1,8 +1,8 @@
-#' This function is from https://gist.github.com/slowkow/c6ab0348747f86e2748b#file-counts_to_tpm-r
-#' Convert counts to transcripts per million (TPM).
-#'
 #' Convert a numeric matrix of features (rows) and conditions (columns) with
 #' raw feature counts to transcripts per million.
+#'
+#'    This function is from https://gist.github.com/slowkow/c6ab0348747f86e2748b#file-counts_to_tpm-r
+#'    Convert counts to transcripts per million (TPM).
 #'
 #'    Lior Pachter. Models for transcript quantification from RNA-Seq.
 #'    arXiv:1104.3889v2
