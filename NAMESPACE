@@ -3,4 +3,4 @@
 export(cluster)
 export(clusterMatrix)
 export(countsToTPM)
-export(ggplotExprHeatmap)
+export(expr_heatmap)

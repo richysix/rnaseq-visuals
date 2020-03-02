@@ -2,8 +2,8 @@
 % Please edit documentation in R/countsToTPM.R
 \name{countsToTPM}
 \alias{countsToTPM}
-\title{This function is from https://gist.github.com/slowkow/c6ab0348747f86e2748b#file-counts_to_tpm-r
-Convert counts to transcripts per million (TPM).}
+\title{Convert a numeric matrix of features (rows) and conditions (columns) with
+raw feature counts to transcripts per million.}
 \usage{
 countsToTPM(counts, featureLength, meanFragmentLength)
 }
@@ -21,14 +21,14 @@ This should be the same length as the number of samples}
 tpm A numeric matrix normalized by library size and feature length
 }
 \description{
-Convert a numeric matrix of features (rows) and conditions (columns) with
-raw feature counts to transcripts per million.
+This function is from https://gist.github.com/slowkow/c6ab0348747f86e2748b#file-counts_to_tpm-r
+   Convert counts to transcripts per million (TPM).
 }
 \details{
 Lior Pachter. Models for transcript quantification from RNA-Seq.
    arXiv:1104.3889v2
 
-Wagner, et al. Measurement of mRNA abundance using RNA-seq data:
+   Wagner, et al. Measurement of mRNA abundance using RNA-seq data:
    RPKM measure is inconsistent among samples. Theory Biosci. 24 July 2012.
    doi:10.1007/s12064-012-0162-3
 }
