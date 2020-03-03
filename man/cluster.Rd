@@ -17,6 +17,7 @@ matrix with columns reordered based on clustering
 orders the leaves optimally
 }
 \examples{
-cluster( matrix )
+set.seed(1452)
+cluster( matrix(rnorm(100), ncol = 5) )
 
 }

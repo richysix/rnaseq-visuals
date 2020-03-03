@@ -21,8 +21,9 @@ reordered matrix based on clustering
 or both
 }
 \examples{
-clusterMatrix( matrix )
+set.seed(1452)
+clusterMatrix( matrix(rnorm(100), ncol = 5) )
 
-clusterMatrix( matrix, byRow = FALSE, byCol = TRUE )
+clusterMatrix( matrix(rnorm(100), ncol = 5), byRow = FALSE, byCol = TRUE )
 
 }

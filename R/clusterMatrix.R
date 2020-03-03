@@ -8,16 +8,17 @@
 #' @return matrix with columns reordered based on clustering
 #'
 #' @examples
-#' cluster( matrix )
+#' set.seed(1452)
+#' cluster( matrix(rnorm(100), ncol = 5) )
 #'
 #' @export
 #'
 cluster <- function( counts ){
   # centre and scale numbers
   scaledCounts <- scale(counts)
-  distanceMatrix <- as.dist( (1 - cor(scaledCounts))/2 )
+  distanceMatrix <- stats::as.dist( (1 - stats::cor(scaledCounts))/2 )
   # cluster and reorder correlation matrix
-  hClust <- hclust(distanceMatrix)
+  hClust <- stats::hclust(distanceMatrix)
   ## find optimal ordering of leaves
   #optOrder <- order.optimal(distanceMatrix, hClust$merge)
   ## reorder count martix and return
@@ -42,9 +43,10 @@ cluster <- function( counts ){
 #' @return reordered matrix based on clustering
 #'
 #' @examples
-#' clusterMatrix( matrix )
+#' set.seed(1452)
+#' clusterMatrix( matrix(rnorm(100), ncol = 5) )
 #'
-#' clusterMatrix( matrix, byRow = FALSE, byCol = TRUE )
+#' clusterMatrix( matrix(rnorm(100), ncol = 5), byRow = FALSE, byCol = TRUE )
 #'
 #' @export
 #'

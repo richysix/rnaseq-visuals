@@ -33,6 +33,10 @@ Lior Pachter. Models for transcript quantification from RNA-Seq.
    doi:10.1007/s12064-012-0162-3
 }
 \examples{
+set.seed(1785)
+counts <- matrix(sample(20:200, size = 100), ncol = 5)
+featureLength <- sample(200:1000, size = 20)
+meanFragmentLength <- sample(200:300, size = 5)
 countsToTPM(counts, featureLength, meanFragmentLength)
 
 }

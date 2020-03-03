@@ -7,7 +7,7 @@
 expr_heatmap(
   expr_matrix,
   scale = NULL,
-  color_scale = "viridis",
+  colour_scale = "viridis",
   legend_position = "left",
   row_labels = NULL
 )
@@ -16,6 +16,8 @@ expr_heatmap(
 \item{expr_matrix}{A numeric matrix of gene expression values}
 
 \item{scale}{character one of 'scale', 'log10'}
+
+\item{colour_scale}{character one of 'viridis', 'plasma', 'magma', 'inferno', 'byr'}
 
 \item{legend_position}{character (one of 'left'[default], 'right', 'bottom', 'top')}
 
@@ -28,6 +30,14 @@ a ggplot heatmap object
 \code{expr_heatmap} returns a heatmap for the supplied matrix
 }
 \examples{
-expr_heatmap( matrix, legend_position = 'right')
+set.seed(1452)
+means <- sample(10:100, size = 50)
+log2fcs <- rnorm(50)
+counts <- matrix( t(sapply(seq_len(50),
+function(x){ c( rnorm(6, mean = means[x]),
+rnorm(6, mean = means[x] * 2^log2fcs[x]) ) } )), nrow = 50 )
+expr_heatmap( counts )
+
+expr_heatmap( counts, legend_position = 'right')
 
 }
